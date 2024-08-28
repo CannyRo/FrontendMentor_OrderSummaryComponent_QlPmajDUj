@@ -35,21 +35,6 @@ main{
     flex-grow: 1;
     overflow: hidden;
 }
-/* main::before{
-    position: absolute;
-    content: ' ';
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    min-width: 639.27px;
-    height: calc(0.3034 * 100vw);
-    min-height: 194px;
-    background-image: url('./images/pattern-background-desktop.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top center;
-} */
 .card{
     z-index: 1;
     padding-top: 160px;
@@ -172,4 +157,54 @@ footer{
 .footer__signature a{
     font-weight: 700;
     color: var(--Bright-blue);
+}
+@media (min-width: 498px){
+    /* When the max-width of card is reached */
+    .card{
+        padding-top: 220px;
+    }
+    .card__content{
+        padding: 45px 48px 48px 48px;
+        text-align: center;
+        background-color: white;
+    }
+    .card__title{
+        margin-bottom: 17px;
+        font-size: 28px;
+        line-height: 37px;
+    }
+    .card__text{
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .card__plan{
+        margin-bottom: 32px;
+        padding: 25px 24px;
+    }
+    .card__plan-title{
+        margin-bottom: 6px;
+        font-size: 16px;
+        line-height: 21px;
+    }
+    .card__plan-price{
+        font-size: 16px;
+        line-height: 21px;
+    }
+    .card__plan-btn{
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .btn-primary{
+        margin-bottom: 32px;
+    }
+}
+@media (min-width: 639px){ 
+    /* When the wv reach the minimal width of the background full size 
+    Size min => width: 639.27px and height: 194px
+    Then we switch the background property */
+    body{
+        background-size: 100% auto;
+        background-position: top center;
+    }
 }
